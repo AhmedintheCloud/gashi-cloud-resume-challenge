@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome To My Resume - Ahmed Tauhidi</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+	 
+
+<div class="resume">
+	
+	<div class="top-section">
+		<div class="headshot-container">
+			<img src="beaniegashi.jpg" alt="Ahmed Tauhidi" class="resume-headshot"> 
+		</div> 
+		<div><h1>Ahmed Tauhidi</h1>
+			<a href="mailto:ahmedntauhidi@gmail.com">ahmedntauhidi@gmail.com</a> 
+			<p>703-388-8722</p> 
+			
+		</div> 
+	</div>
+	<main>
+    <section class="resume-section" id="experience">
+        <h2>Work History</h2> 
+		
+		<h3>Geek Squad Computer/Home Theater Field Agent, 2018-2022</h3>
+        <h4>As a geek squad field Agent, I specialized in both PC install home theater installations. I became proficient in many skills. My daily tasks included in the list below are what I am proficient in but not limited to..</h4>
+		<p> - home networking (mesh network, custom router) </p> 
+		<p> - network troubleshooting </p> 
+		<p> - home automation </p>
+		<p> - Pre built PC installation & Custom built</p>
+		<p> - TV installations  (mounted,unmounted) </p>
+		<p> - Home audio/theater entertainment (receiver set ups, whole house wire runs </p>
+		<p> - Home theater troubleshooting </p> 
+		<p> - Client advisement on what services to purchase for tailored needs and providing those 
+		products in home to sell </p>  
+		
+		<h3>AWS Data Center Technician, 2022 - Current</h3>
+		<h4>A lot of my work ethic and experience transferred over with me when I started working at AWS. Through trial and error, I became a seasoned data center operative fully capable of being able to learn and also teach others. My tasks working here are listed below but not limited to..</h4>
+		<p> - working on priority tickets such as EC2, EBS, S3, DynamoDB etc. </p> 
+		<p> - working on high risk specialized devices like AWS’s TRN hosts, P5s and other accelerator devices </p>
+		<p> - media auditing for other team member to ensure customer data is secure</p> 
+		<p> - working as an on call on campus to monitor high severity tickets that cut</p>
+		<p> - working closely with remote network engineers for high severity tickets to be executed </p> 
+		<p> - working closely with hardware engineers for specialized tickets like faulty powershelfs </p>
+		<p> - keeping laptops updated to be of use for team members and ultimately save company money </p>
+		<p> - creating projects involving safety to inform and retrain employees </p>
+		<p> - train new employees for them to become accustomed to working tickets </p>
+		    </section>
+
+	<section class="resume-section" id="education">
+		<h2>Certifications</h2> 
+		<h4>Comptia A+</h4>
+		<a href="https://www.credly.com/badges/882c41df-683a-401d-afe7-ce733cc1658c/public_url" target="_blank">Credly Link</a> 
+
+		<h4>AWS Cloud Practitioner</h4> 
+		<a href="https://www.credly.com/badges/2487bc85-0d1d-44da-893c-5af034864e34/public_url" target="_blank">Credly Link</a> 
+		
+		<h4>AWS Solutions Architect</h4> 
+		<a href="https://www.credly.com/badges/ece7dfdb-1f2f-47de-b5c7-0de6ac30074d/public_url" target="_blank">Credly Link</a>
+		
+			</li>
+		</ul>
+	</section>
+
+
+    <section class="resume-section" id="certifications">
+        <h2>Skills and Certifications</h2>
+	        <h4> - Knowledgable in HTML,CSS & Javascript/Node.js</h4>
+			<h4> - Knowledgable in Python</h4>
+			<h4> - Proficient in using Windows OS & Linux</h4>
+			<h4> - Experienced in utilizing AWS services both from a physical standpoint due to working in data centers and creating/managing services via the AWS console </h4>
+	    </section>
+</div> 
+</main>
+
+	<footer>
+	<hr> 
+	 <p> Website views count: <span id="viewCount">Loading...</span> </p>
+	
+	</footer>  
+	 <script>
+        const functionUrl = "https://o2q4vu3oj5n4m4hrzaurwqzpxy0ksdrk.lambda-url.us-east-1.on.aws/";
+      
+        async function fetchViewCount() {
+          try {
+            const response = await fetch(functionUrl);
+            const data = await response.json();
+      
+            // Display the view count
+            document.getElementById("viewCount").innerText = data.views;
+          } catch (error) {
+            console.log(error)
+            console.error("Error fetching view count:", error);
+            document.getElementById("viewCount").innerText = "error";
+          }
+        }
+      
+        // Run when the page loads
+        window.onload = fetchViewCount;
+      </script>
+	
+	
+
+<script src="scripts.js"></script> 
+
+</body>
+</html>
